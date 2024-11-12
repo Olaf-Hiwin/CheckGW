@@ -1,0 +1,351 @@
+<html>
+    <head>
+        <title>Verifica GW Hiwin</title>
+        <link rel="stylesheet" href="./HiwinConfigurator.css">
+        <script src="./index_ITA.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.14/jspdf.plugin.autotable.min.js"></script>
+    </head>
+    <body>
+        <h3>Tipo di guida</h3>
+          <ul>
+            <li><input type="radio" name="series" id="hgr" onclick="ChangeSeriesSelection()" checked/>
+              <label for="hgr">
+                <div class="tooltip">
+                    <span class="tooltiptext">Alta rigidezza</span>
+                    HGR<br>
+                    <img src="assets/HG_QH.png" /><br>
+                </div>
+                </label>
+            </li>
+            <li><input type="radio" name="series" id="egr" onclick="ChangeSeriesSelection()"/>
+              <label for="egr">
+                <div class="tooltip">
+                    <span class="tooltiptext">Altezza di montaggio ridotta</span>
+                    EGR<br>
+                    <img src="assets/EG_QE.png" /><br>
+                </div>
+                </label>
+            </li>
+            <li><input type="radio" name="series" id="cgr" onclick="ChangeSeriesSelection()"/>
+              <label for="cgr">
+                <div class="tooltip">
+                    <span class="tooltiptext">Alta capacità di carico torsionale</span>
+                    CGR<br>
+                    <img src="assets/CG.png" /><br>
+                </div>
+                </label>
+            </li>
+            <li><input type="radio" name="series" id="wer" onclick="ChangeSeriesSelection()"/>
+              <label for="wer">
+                <div class="tooltip">
+                    <span class="tooltiptext">Alta capacità di carico flessionale</span>
+                    WER<br>
+                    <img src="assets/WE_QW.png" /><br>
+                </div>
+                </label>
+            </li>
+            <li><input type="radio" name="series" id="mgnr" onclick="ChangeSeriesSelection()"/>
+              <label for="mgnr">
+                <div class="tooltip">
+                    <span class="tooltiptext">Compatta, stretta</span>
+                    MGNR<br>
+                    <img src="assets/MG.png" /><br>
+                </div>
+                </label>
+            </li>
+            <li><input type="radio" name="series" id="mgwr" onclick="ChangeSeriesSelection()"/>
+              <label for="mgwr">
+                <div class="tooltip">
+                    <span class="tooltiptext">Compatta, larga</span>
+                    MGWR<br>
+                    <img src="assets/MG.png" /><br>
+                </div>
+                </label>
+            </li>
+            <li><input type="radio" name="series" id="rgr" onclick="ChangeSeriesSelection()"/>
+              <label for="rgr">
+                <div class="tooltip">
+                    <span class="tooltiptext">Alta rigidezza, alta capacità di carico</span>
+                    RGR<br>
+                    <img src="assets/RG_QR.png" /><br>
+                </div>
+                </label>
+            </li>
+        </ul>
+        <h3>Misura</h3>
+        <ul>
+          <li id="l05r"><input type="radio" name="size" id="05r" onclick="ChangeSizeSelection()"/>
+            <label for="05r">
+              <div class="tooltip">
+                  <span class="tooltiptext">5 mm, fissaggio dall'alto</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;05R
+              </div>
+            </label>
+          </li>    
+          <li id="l07r"><input type="radio" name="size" id="07r" onclick="ChangeSizeSelection()"/>
+            <label for="07r">
+              <div class="tooltip">
+                  <span class="tooltiptext">7 mm, fissaggio dall'alto</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;07R
+              </div>
+            </label>
+          </li>    
+          <li id="l09r"><input type="radio" name="size" id="09r" onclick="ChangeSizeSelection()"/>
+            <label for="09r">
+              <div class="tooltip">
+                  <span class="tooltiptext">9 mm, fissaggio dall'alto</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;09R
+              </div>
+            </label>
+          </li>    
+          <li id="l12r"><input type="radio" name="size" id="12r" onclick="ChangeSizeSelection()"/>
+            <label for="12r">
+              <div class="tooltip">
+                  <span class="tooltiptext">12 mm, fissaggio dall'alto</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12R
+              </div>
+            </label>
+          </li>    
+          <li id="l15r"><input type="radio" name="size" id="15r" onclick="ChangeSizeSelection()" checked/>
+            <label for="15r">
+              <div class="tooltip">
+                  <span class="tooltiptext">15 mm, fissaggio dall'alto</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15R
+              </div>
+            </label>
+          </li>   
+          <li id="l17r"><input type="radio" name="size" id="17r" onclick="ChangeSizeSelection()"/>
+            <label for="17r">
+              <div class="tooltip">
+                  <span class="tooltiptext">17 mm, fissaggio dall'alto</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17R
+              </div>
+            </label>
+          </li>        
+          <li id="l20r"><input type="radio" name="size" id="20r" onclick="ChangeSizeSelection()"/>
+            <label for="20r">
+              <div class="tooltip">
+                  <span class="tooltiptext">20 mm, fissaggio dall'alto</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20R
+              </div>
+            </label>
+          </li>    
+          <li id="l21r"><input type="radio" name="size" id="21r" onclick="ChangeSizeSelection()"/>
+            <label for="21r">
+              <div class="tooltip">
+                  <span class="tooltiptext">21 mm, fissaggio dall'alto</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21R
+              </div>
+            </label>
+          </li>    
+          <li id="l25r"><input type="radio" name="size" id="25r" onclick="ChangeSizeSelection()"/>
+            <label for="25r">
+              <div class="tooltip">
+                  <span class="tooltiptext">25 mm, fissaggio dall'alto</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25R
+              </div>
+            </label>
+          </li>
+          <li id="l27r"><input type="radio" name="size" id="27r" onclick="ChangeSizeSelection()"/>
+            <label for="27r">
+              <div class="tooltip">
+                  <span class="tooltiptext">27 mm, fissaggio dall'alto</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;27R
+              </div>
+            </label>
+          </li>
+          <li id="l30r"><input type="radio" name="size" id="30r" onclick="ChangeSizeSelection()"/>
+            <label for="30r">
+              <div class="tooltip">
+                  <span class="tooltiptext">30 mm, fissaggio dall'alto</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;30R
+              </div>
+            </label>
+          </li>
+          <li id="l35r"><input type="radio" name="size" id="35r" onclick="ChangeSizeSelection()"/>
+            <label for="35r">
+              <div class="tooltip">
+                  <span class="tooltiptext">35 mm, fissaggio dall'alto</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;35R
+              </div>
+            </label>
+          </li>
+          <li id="l45r"><input type="radio" name="size" id="45r" onclick="ChangeSizeSelection()"/>
+            <label for="45r">
+              <div class="tooltip">
+                  <span class="tooltiptext">45 mm, fissaggio dall'alto</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;45R
+              </div>
+            </label>
+          </li>
+          <li id="l50r"><input type="radio" name="size" id="50r" onclick="ChangeSizeSelection()"/>
+            <label for="50r">
+              <div class="tooltip">
+                  <span class="tooltiptext">50 mm, fissaggio dall'alto</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50R
+              </div>
+            </label>
+          </li>
+          <li id="l55r"><input type="radio" name="size" id="55r" onclick="ChangeSizeSelection()"/>
+            <label for="55r">
+              <div class="tooltip">
+                  <span class="tooltiptext">55 mm, fissaggio dall'alto</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;55R
+              </div>
+            </label>
+          </li>
+          <li id="l65r"><input type="radio" name="size" id="65r" onclick="ChangeSizeSelection()"/>
+            <label for="65r">
+              <div class="tooltip">
+                  <span class="tooltiptext">65 mm, fissaggio dall'alto</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;65R
+              </div>
+            </label>
+          </li>
+          <li id="l15t"><input type="radio" name="size" id="15t" onclick="ChangeSizeSelection()"/>
+            <label for="15t">
+              <div class="tooltip">
+                  <span class="tooltiptext">15 mm, fissaggio dal basso</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15T
+              </div>
+            </label>
+          </li>       
+          <li id="l20t"><input type="radio" name="size" id="20t" onclick="ChangeSizeSelection()"/>
+            <label for="20t">
+              <div class="tooltip">
+                  <span class="tooltiptext">20 mm, fissaggio dal basso</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20T
+              </div>
+            </label>
+          </li>    
+          <li id="l25t"><input type="radio" name="size" id="25t" onclick="ChangeSizeSelection()"/>
+            <label for="25t">
+              <div class="tooltip">
+                  <span class="tooltiptext">25 mm, fissaggio dal basso</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25T
+              </div>
+            </label>
+          </li>
+          <li id="l30t"><input type="radio" name="size" id="30t" onclick="ChangeSizeSelection()"/>
+            <label for="30t">
+              <div class="tooltip">
+                  <span class="tooltiptext">30 mm, fissaggio dal basso</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;30T
+              </div>
+            </label>
+          </li>
+          <li id="l35t"><input type="radio" name="size" id="35t" onclick="ChangeSizeSelection()"/>
+            <label for="35t">
+              <div class="tooltip">
+                  <span class="tooltiptext">35 mm, fissaggio dal basso</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;35T
+              </div>
+            </label>
+          </li>
+          <li id="l45t"><input type="radio" name="size" id="45t" onclick="ChangeSizeSelection()"/>
+            <label for="45t">
+              <div class="tooltip">
+                  <span class="tooltiptext">45 mm, fissaggio dal basso</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;45T
+              </div>
+            </label>
+          </li>
+          <li id="l55t"><input type="radio" name="size" id="55t" onclick="ChangeSizeSelection()"/>
+            <label for="55t">
+              <div class="tooltip">
+                  <span class="tooltiptext">55 mm, fissaggio dal basso</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;55T
+              </div>
+            </label>
+          </li>
+          <li id="l65t"><input type="radio" name="size" id="65t" onclick="ChangeSizeSelection()"/>
+            <label for="65t">
+              <div class="tooltip">
+                  <span class="tooltiptext">65 mm, fissaggio dal basso</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;65T
+              </div>
+            </label>
+          </li>
+          <li id="l20rg1"><input type="radio" name="size" id="20rg1" onclick="ChangeSizeSelection()"/>
+            <label for="20rg1">
+              <div class="tooltip">
+                  <span class="tooltiptext">20 mm, fissaggio dall'alto, con solco</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20R G1
+              </div>
+            </label>
+          </li>
+          <li id="l25rg1c"><input type="radio" name="size" id="25rg1c" onclick="ChangeSizeSelection()"/>
+            <label for="25rg1c">
+              <div class="tooltip">
+                  <span class="tooltiptext">25 mm, fissaggio dall'alto, con solco</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25R G1C
+              </div>
+            </label>
+          </li>
+          <li id="l20tg1"><input type="radio" name="size" id="20tg1" onclick="ChangeSizeSelection()"/>
+            <label for="20tg1">
+              <div class="tooltip">
+                  <span class="tooltiptext">20 mm, fissaggio dal basso, con solco</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20T G1
+              </div>
+            </label>
+          </li>
+          <li id="l15u"><input type="radio" name="size" id="15u" onclick="ChangeSizeSelection()"/>
+            <label for="15u">
+              <div class="tooltip">
+                  <span class="tooltiptext">15 mm, fissaggio dall'alto con fori larghi</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15U
+              </div>
+            </label>
+          </li>
+          <li id="l30u"><input type="radio" name="size" id="30u" onclick="ChangeSizeSelection()"/>
+            <label for="30u">
+              <div class="tooltip">
+                  <span class="tooltiptext">30 mm, fissaggio dall'alto con fori larghi</span>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;30U
+              </div>
+            </label>
+          </li>
+        </ul>
+        <h3>Lunghezza totale (mm)</h3>
+          <div class="nud">
+            <input type="text" class="nudtext" id="ltot" value="2000.00" onblur="LeaveTxt(0,4000,0.01,'ltot')">
+            <div class="nudbts">
+              <button class="nudbtup" id="bupltot" onclick="IncreaseNum(0,4000,0.01,'ltot')">
+                <div class="nudarup"></div>
+              </button>
+              <button class="nudbtdw" id="bdwltot" onclick="DecreaseNum(0,4000,0.01,'ltot')">
+                <div class="nudardw"></div>
+              </button>
+            </div>
+          </div>
+        <h3>Valore E sinistra (mm)</h3>
+          <div class="nud">
+            <input type="text" class="nudtext" id="lsx" value="10.00" onblur="LeaveTxt(0,4000,0.01,'lsx')">
+            <div class="nudbts">
+              <button class="nudbtup" id="buplsx" onclick="IncreaseNum(0,4000,0.01,'lsx')">
+                <div class="nudarup"></div>
+              </button>
+              <button class="nudbtdw" id="bdwlsx" onclick="DecreaseNum(0,4000,0.01,'lsx')">
+                <div class="nudardw"></div>
+              </button>
+            </div>
+          </div>
+        <h3>Valore E destra (mm)</h3>
+          <div class="nud">
+            <input type="text" class="nudtext" id="ldx" value="10.00" onblur="LeaveTxt(0,4000,0.01,'ldx')">
+            <div class="nudbts">
+              <button class="nudbtup" id="bupldx" onclick="IncreaseNum(0,4000,0.01,'ldx')">
+                <div class="nudarup"></div>
+              </button>
+              <button class="nudbtdw" id="bdwldx" onclick="DecreaseNum(0,4000,0.01,'ldx')">
+                <div class="nudardw"></div>
+              </button>
+            </div>
+          </div>
+        <h3>Esito verifica</h3>
+        <button class="btn" onclick="EvaluateRail()">Esegui verifica</button>
+        <p><textarea id="resultlabel">In attesa di valutazione</textarea></p>
+    </body>
+</html>
